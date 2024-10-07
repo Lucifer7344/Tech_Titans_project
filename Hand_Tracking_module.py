@@ -2,8 +2,9 @@ import cv2
 import mediapipe as mp
 import time
 
+
 class handDetector():
-    def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5 ):
+    def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
         self.mode = mode
         self.maxHands = maxHands
         self.detectionCon = detectionCon
@@ -30,6 +31,8 @@ class handDetector():
 #                   print(id, cx, cy)
 #                   if id == 4:
 #                       cv2.circle(img, (cx, cy), 15, (250, 0, 254), cv2.FILLED)
+
+
 def main():
     pTime = 0
     cTime = 0
@@ -46,6 +49,7 @@ def main():
         cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_DUPLEX, 3, (255, 0, 224), 3)
         cv2.imshow("Image", img)
         cv2.waitKey(1)
+
 
 if __name__ == "__main__":
     main()
